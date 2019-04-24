@@ -16,15 +16,13 @@
 <meta property="og:site_name" content="赵志岳">
 <meta property="og:description" content="本文将介绍python中jieba模块的使用，jieba用来对中文句子进行分词，可以用来统计各词语的出现频率和生成词云等。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/2019/04/21/python词云/counts.png">
 <meta property="og:image" content="http://yoursite.com/2019/04/21/python词云/ouput.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/21/python词云/ciyun.png">
 <meta property="og:image" content="http://yoursite.com/2019/04/21/python词云/倚天屠龙记基本词云.png">
-<meta property="og:updated_time" content="2019-04-22T06:17:12.663Z">
+<meta property="og:updated_time" content="2019-04-24T08:57:41.522Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python词云">
 <meta name="twitter:description" content="本文将介绍python中jieba模块的使用，jieba用来对中文句子进行分词，可以用来统计各词语的出现频率和生成词云等。">
-<meta name="twitter:image" content="http://yoursite.com/2019/04/21/python词云/counts.png">
+<meta name="twitter:image" content="http://yoursite.com/2019/04/21/python词云/ouput.png">
   
   
     <link rel="icon" href="/favicon.png">
@@ -172,20 +170,22 @@
       
         <p>本文将介绍python中jieba模块的使用，jieba用来对中文句子进行分词，可以用来统计各词语的出现频率和生成词云等。<br><a id="more"></a></p>
 <blockquote>
-<p>统计各词出现的频率</p>
+<p>统计各词出现的频率<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> jieba<span class="comment">#导入jieba分词库</span></span><br><span class="line"><span class="keyword">with</span> open (<span class="string">"yitiantulongji.txt"</span>,<span class="string">"r"</span>,encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f:<span class="comment">#打开txt文件</span></span><br><span class="line">    txt=f.read()<span class="comment">#读取到变量txt中</span></span><br><span class="line">ls=&#123;<span class="string">'说道'</span>,<span class="string">'甚么'</span>,<span class="string">'自己'</span>,<span class="string">'一个'</span>,<span class="string">'咱们'</span>,<span class="string">'心中'</span>,<span class="string">'一声'</span>,<span class="string">'只见'</span>,<span class="string">'武功'</span>,<span class="string">'便是'</span>,\</span><br><span class="line">    <span class="string">'不是'</span>,<span class="string">'如此'</span>,<span class="string">'不知'</span>,<span class="string">'弟子'</span>,<span class="string">'之中'</span>,<span class="string">'出来'</span>,<span class="string">'如何'</span>,<span class="string">'师父'</span>,<span class="string">'突然'</span>,<span class="string">'突然'</span>,\</span><br><span class="line">        <span class="string">'他们'</span>,<span class="string">'教主'</span>&#125;<span class="comment">#排除不想要的词语</span></span><br><span class="line"></span><br><span class="line">words=jieba.lcut(txt)<span class="comment">#用jieba中的lcut方法进行分词，存入words中</span></span><br><span class="line">counts=&#123;&#125;<span class="comment">#新建一个空字典</span></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> words:<span class="comment">#用循环统计各各出现的个数，词语为字典的key，次数为value</span></span><br><span class="line">    <span class="keyword">if</span> len(x) ==<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">    <span class="keyword">elif</span> x <span class="keyword">in</span> ls:</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        counts[x]=counts.get(x,<span class="number">0</span>)+<span class="number">1</span></span><br><span class="line"></span><br><span class="line">items=list(counts.items())<span class="comment">#把字典转换为列表</span></span><br><span class="line">items.sort(key=<span class="keyword">lambda</span> x:x[<span class="number">1</span>],reverse= <span class="literal">True</span>)<span class="comment">#排序</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">30</span>):<span class="comment">#打印出前30名的词语</span></span><br><span class="line">    word, count=items[i]</span><br><span class="line">    print(word,count)</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<div align="center"><br>  <img src="/2019/04/21/python词云/counts.png"><br></div>
-
+<!-- <div align=center>
+  <img  src="wordcloud\counts.png" >
+</div> -->
 <blockquote>
 <p>运行结果：</p>
 </blockquote>
 <div align="center"><br>  <img src="/2019/04/21/python词云/ouput.png"><br></div>
 
 <blockquote>
-<p>生成词云</p>
+<p>生成词云<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> jieba <span class="comment">#导入jieba分词库</span></span><br><span class="line"><span class="keyword">from</span> wordcloud <span class="keyword">import</span> WordCloud<span class="comment">#导入wordcloud库，用来生成词云</span></span><br><span class="line"><span class="keyword">with</span> open (<span class="string">"yitiantulongji.txt"</span>,<span class="string">"r"</span>,encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    txt=f.read()</span><br><span class="line"><span class="comment">#另一种打开文件的方式，比较麻烦，推荐使用第一种</span></span><br><span class="line"><span class="comment"># f=open("yitiantulongji.txt","r",encoding='utf-8')</span></span><br><span class="line"><span class="comment"># txt=f.read()</span></span><br><span class="line"><span class="comment"># f.close()</span></span><br><span class="line">ls=&#123;<span class="string">'说道'</span>,<span class="string">'甚么'</span>,<span class="string">'自己'</span>,<span class="string">'一个'</span>,<span class="string">'咱们'</span>,<span class="string">'心中'</span>,<span class="string">'一声'</span>,<span class="string">'只见'</span>,<span class="string">'武功'</span>,\</span><br><span class="line">    <span class="string">'便是'</span>,<span class="string">'不是'</span>,<span class="string">'如此'</span>,<span class="string">'不知'</span>,<span class="string">'弟子'</span>,<span class="string">'之中'</span>,<span class="string">'出来'</span>,<span class="string">'如何'</span>,<span class="string">'突然'</span>,\</span><br><span class="line">        <span class="string">'突然'</span>,<span class="string">'他们'</span>&#125;<span class="comment">#排除一些无意义的词语，仅作为示例</span></span><br><span class="line"></span><br><span class="line">words=jieba.lcut(txt)</span><br><span class="line">newtxt=<span class="string">''</span>.join(words)</span><br><span class="line">wordcloud=WordCloud(background_color=<span class="string">"white"</span>,width=<span class="number">800</span>,font_path=<span class="string">'./fonts/simhei.ttf'</span>,\</span><br><span class="line">    stopwords=ls,height=<span class="number">600</span>,max_words=<span class="number">200</span>,max_font_size=<span class="number">80</span>).generate(newtxt)</span><br><span class="line">wordcloud.to_file(<span class="string">'倚天屠龙记基本词云.png'</span>)<span class="comment">#生成图片</span></span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<div align="center"><br>  <img src="/2019/04/21/python词云/ciyun.png"><br></div>
-
+<!-- <div align=center>
+  <img  src="wordcloud\ciyun.png" >
+</div> -->
 <blockquote>
 <p>生成的词云图片就在存放程序的文件夹内</p>
 </blockquote>
