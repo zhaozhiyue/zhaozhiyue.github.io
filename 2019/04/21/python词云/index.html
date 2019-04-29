@@ -422,6 +422,22 @@
   
 
   
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://yoursite.com/2019/04/21/python词云/",
+  owner: 'zhaozhiyue',
+  repo: 'comments',
+  oauth: {
+    client_id: '000',
+    client_secret: '123456',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+  
 
 
           </div>
