@@ -6,22 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>MySQL学习 | 赵志岳</title>
+  <title>更换pip清华源和更换ubuntu清华源 | 赵志岳</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="MySQL学习思维导图(持续更新中)">
-<meta name="keywords" content="MySQL">
+  <meta name="description" content="将pip和Ubuntu下载更新源更新为国内源，可以获得更快的下载速度">
+<meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL学习">
-<meta property="og:url" content="http://yoursite.com/2019/04/22/MySQL学习/index.html">
+<meta property="og:title" content="更换pip清华源和更换ubuntu清华源">
+<meta property="og:url" content="http://yoursite.com/2019/07/17/更换pip清华源和更换ubuntu清华源/index.html">
 <meta property="og:site_name" content="赵志岳">
-<meta property="og:description" content="MySQL学习思维导图(持续更新中)">
+<meta property="og:description" content="将pip和Ubuntu下载更新源更新为国内源，可以获得更快的下载速度">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/2019/04/22/MySQL学习/mysql.png">
-<meta property="og:updated_time" content="2019-04-22T12:41:47.472Z">
+<meta property="og:image" content="http://yoursite.com/home/picture/1.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/17/更换pip清华源和更换ubuntu清华源/1.png">
+<meta property="og:updated_time" content="2019-07-17T14:16:10.620Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MySQL学习">
-<meta name="twitter:description" content="MySQL学习思维导图(持续更新中)">
-<meta name="twitter:image" content="http://yoursite.com/2019/04/22/MySQL学习/mysql.png">
+<meta name="twitter:title" content="更换pip清华源和更换ubuntu清华源">
+<meta name="twitter:description" content="将pip和Ubuntu下载更新源更新为国内源，可以获得更快的下载速度">
+<meta name="twitter:image" content="http://yoursite.com/home/picture/1.png">
   
   
     <link rel="icon" href="/favicon.png">
@@ -141,44 +142,34 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-MySQL学习" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-更换pip清华源和更换ubuntu清华源" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      MySQL学习
+      更换pip清华源和更换ubuntu清华源
     </h1>
   
 
         
-        <a href="/2019/04/22/MySQL学习/" class="archive-article-date">
-  	<time datetime="2019-04-22T12:29:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-22</time>
+        <a href="/2019/07/17/更换pip清华源和更换ubuntu清华源/" class="archive-article-date">
+  	<time datetime="2019-07-17T13:52:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>MySQL学习思维导图(持续更新中)<br><a id="more"></a></p>
-<center><strong>MySQL学习思维导图(持续更新中)</strong></center>
-
-
-<p><br></p>
-
-
-	<div class="row">
-    <embed src="MySQL.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
- 
-<p><br></p>
-<blockquote>
-<p>PDF插件可能暂时不支持手机浏览器，可以用电脑浏览器进行查看（效果如下）</p>
-</blockquote>
-<div align="center"><br>  <img src="/2019/04/22/MySQL学习/mysql.png"><br></div>
+        <p>将pip和Ubuntu下载更新源更新为国内源，可以获得更快的下载速度<br><a id="more"></a></p>
+<h3 id="一、更改pip清华源"><a href="#一、更改pip清华源" class="headerlink" title="一、更改pip清华源"></a>一、更改pip清华源</h3><p>Python是一种现在非常流行的语言，而pip是通用的 Python包管理工具。提供了对 Python 包的查找、下载、安装、卸载的功能。使用起来也非常方便，但是由于网站在国外的原因，有时下载包的速度会非常缓慢，几k每秒，所以几兆大小的包可能会下载很久，这时，我们可以使用国内的镜像进行下载，速度回变得飞快。下面以numpy为例。<br>将pip install numpy改为<br><code>pip install -i https://pypi.tuna.tsinghua.edu.cn/simple numpy</code><br>安装其他包同理<br>当然了每次都要加上这个就太不方便了，有没有一劳永逸的方法呢，当然有，方式如下。</p>
+<h4 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h4><p>只要在C:\Users\（用户名）下新建一个pip文件夹，然后，新建一个txt文件，然后内容改为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">index-url = https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure></p>
+<p>然后重命名为pip.ini即可。<br><img src="/home/picture/1.png" alt="示意图"></p>
+<h4 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h4><p>修改 ~/.pip/pip.conf (没有就创建一个)， 修改 index-url至tuna，内容如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">index-url = https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure></p>
+<p>更改清华源后可以看到下载速度得到了很大的提升<br> <img src="/2019/07/17/更换pip清华源和更换ubuntu清华源/1.png" alt="图片alt"></p>
+<h3 id="二、Ubuntu18-04更换apt清华园源"><a href="#二、Ubuntu18-04更换apt清华园源" class="headerlink" title="二、Ubuntu18.04更换apt清华园源"></a>二、Ubuntu18.04更换apt清华园源</h3><p>备份原始信息<br><code>sudo cp /etc/apt/sources.list /etc/apt/sources.list_backup</code><br>编辑<br><code>sudo gedit /etc/apt/sources.list</code><br>在开头加上以下信息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line"></span><br><span class="line"># 预发布软件源，不建议启用</span><br><span class="line"># deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse</span><br></pre></td></tr></table></figure></p>
+<p>更新<br><code>sudo apt-get update</code><br><a href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/" target="_blank" rel="noopener">其他ubuntu版本</a> </p>
 
       
 
@@ -192,7 +183,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySQL</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
         		</li>
       		
 		</ul>
@@ -248,7 +239,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/04/22/MySQL学习/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/17/更换pip清华源和更换ubuntu清华源/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -262,18 +253,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/04/29/2015骑行上海/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          2015骑行上海
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/04/21/python词云/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Python词云</div>
+    <a href="/2019/07/11/MarkDown基本语法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MarkDown基本语法</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -301,7 +283,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="MySQL学习" data-title="MySQL学习" data-url="http://yoursite.com/2019/04/22/MySQL学习/"></div>
+	<div class="ds-thread" data-thread-key="更换pip清华源和更换ubuntu清华源" data-title="更换pip清华源和更换ubuntu清华源" data-url="http://yoursite.com/2019/07/17/更换pip清华源和更换ubuntu清华源/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -324,8 +306,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://yoursite.com/2019/04/22/MySQL学习/", 
-    sourceId: "MySQL学习",
+    url: "http://yoursite.com/2019/07/17/更换pip清华源和更换ubuntu清华源/", 
+    sourceId: "更换pip清华源和更换ubuntu清华源",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };
@@ -334,7 +316,7 @@
   
 
   
-  <div id="SOHUCS" sid="MySQL学习"></div> 
+  <div id="SOHUCS" sid="更换pip清华源和更换ubuntu清华源"></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js"></script>
 <script type="text/javascript">
     window.changyan.api.config({
@@ -371,7 +353,7 @@
 <script src="https://jjeejj.github.io/js/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://yoursite.com/2019/04/22/MySQL学习/",
+  id: "http://yoursite.com/2019/07/17/更换pip清华源和更换ubuntu清华源/",
   owner: 'zhaozhiyue',
   repo: 'zhaozhiyue.github.io',
   oauth: {
